@@ -33,6 +33,8 @@ createApp({
                 }
             ],
             currentIndex: 0, 
+            autoplayInterval: null,
+
 
             
         }
@@ -52,7 +54,9 @@ createApp({
                 this.nextSlide();
             }, 3000);
         },
-
+        pauseAutoplay() {
+            clearInterval(this.autoplayInterval);
+        },
     },
    
 }).mount('#app')
