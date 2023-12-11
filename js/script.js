@@ -47,6 +47,7 @@ createApp({
         setActiveIndex(index) {
             this.currentIndex = index;
         },
+        
     },
    
 }).mount('#app')
