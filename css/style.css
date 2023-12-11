@@ -22,7 +22,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: none;
 }
 
 .item .text {
@@ -105,4 +104,9 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     transform: translate(-50%) rotate(135deg);
 }
 
-
+.imgActive{
+    display: block;
+}
+.imgNotActive{
+    display: none;
+}
