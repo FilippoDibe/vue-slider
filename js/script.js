@@ -34,5 +34,10 @@ createApp({
             ],
             currentI:0,
         }
-    }
+    },
+    // methods: {
+    //     changeSlide(i) {
+    //         this.currentI = i;
+    //     },
+    // },
 }).mount('#app')
