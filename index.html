@@ -16,16 +16,20 @@
         <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item" v-for="(slide, index) in slides" :key="index" :class="{ 'active': index === currentIndex }">
-                    <img :src="slide.image" :alt="slide.title" class="imgActive" />
+                <div class="item" v-for="(slide, index) in slides" :key="index" :class="{ 'imgActive': index === currentIndex, 'imgNotActive': index !== currentIndex }">
+                    <img :src="slide.image" :alt="slide.title" class="imgActive" @click="setActiveIndex(index)" />
                     <div class="text">
                         <h3>{{ slide.title }}</h3>
                         <p>{{ slide.text }}</p>
                     </div>
                 </div>
 
-                <div class="thumb" v-for="(slide, index) in slides" :key="index" :class="{ 'active': index === currentIndex }">
-                    <img :src="slide.image" :alt="slide.title" @click="setActiveIndex(index)" />
+                <div class="thumbs">
+                    <div class="prev" @click="prevSlide"></div>
+                    <div class="next" @click="nextSlide"></div>
+                    <div class="thumb" v-for="(slide, index) in slides" :key="index" :class="{ 'active': index === currentIndex }">
+                        <img :src="slide.image" :alt="slide.title" @click="setActiveIndex(index)" />
+                    </div>
                 </div>
 
             </div>
